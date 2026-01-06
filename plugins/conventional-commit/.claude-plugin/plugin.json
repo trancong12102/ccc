@@ -1,0 +1,18 @@
+{
+  "$schema": "../../../schemas/plugin.schema.json",
+  "name": "conventional-commit",
+  "version": "1.0.0",
+  "description": "Generate semantic, machine-readable commit messages following the Conventional Commits specification",
+  "author": {
+    "name": "Cong Tran",
+    "email": "trancong12102@gmail.com"
+  },
+  "keywords": [
+    "git",
+    "commit",
+    "conventional-commits",
+    "semantic-versioning",
+    "changelog"
+  ],
+  "license": "MIT"
+}

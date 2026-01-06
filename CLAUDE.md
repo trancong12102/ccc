@@ -116,7 +116,7 @@ Instructions...
 ```markdown
 ---
 name: Skill Name
-description: When to activate this skill
+description: Activate when [trigger conditions]. [What it does] for [use case].
 version: 1.0.0
 ---
 
@@ -124,3 +124,82 @@ version: 1.0.0
 
 Instructions...
 ```
+
+## Skill Authoring Best Practices
+
+### Activation & Triggers
+
+- Skills are triggered by the `description` field in YAML frontmatter
+- **DO NOT** add "When to Activate" sections - they are redundant
+- Include trigger keywords in description: "Activate when creating X, doing Y, or running Z"
+- Be specific: "Extract PDF text" > "Helps with documents"
+
+### Description Format
+
+```yaml
+description: Activate when [trigger conditions]. [What it does] for [use case].
+```
+
+**Example:**
+
+```yaml
+description: Activate when creating git commits, committing changes, or writing commit messages. Generates semantic messages following Conventional Commits for changelog automation.
+```
+
+### Content Structure
+
+```markdown
+# Skill Name
+
+Brief intro paragraph.
+
+## [Reference Section]
+Tables, formats, types for quick lookup.
+
+## Workflow
+Step-by-step instructions with "Think step-by-step" trigger.
+
+## Rules
+Grouped constraints and guidelines.
+
+## Examples
+Concrete examples wrapped for clarity.
+
+## Anti-Patterns
+Bad/Why/Good comparison table.
+
+## Safety Constraints
+Hard rules and limitations.
+```
+
+### Claude 4.5 Prompting Best Practices
+
+Apply these when writing skill instructions:
+
+1. **Use XML tags** for structured sections (optional, triggers lint warnings)
+   - Add blank lines before and after XML tags for proper markdown rendering:
+
+   ```markdown
+   ## Section
+
+   <tagname>
+
+   Content here...
+
+   </tagname>
+
+   ## Next Section
+   ```
+
+2. **"Think step-by-step"** - Add this phrase before complex workflows
+3. **Provide examples** - Show concrete good/bad patterns
+4. **Be explicit** - Detailed instructions, no ambiguity
+5. **Decision trees** - Visual flowcharts for classification tasks
+6. **Anti-patterns table** - Bad | Why | Good format
+
+### Size Guidelines
+
+- Keep under **500 lines**
+- Use progressive disclosure for details >100 lines
+- Assume Claude knows basics - only include necessary guidance
+
