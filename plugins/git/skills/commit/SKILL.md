@@ -1,6 +1,6 @@
 ---
 name: commit
-description: This skill should be used when the user asks to "commit", "make a commit", "commit changes", "write a commit message", "run git commit", or "/commit". Also use when Claude needs to commit after implementing changes or completing a task. Generates semantic, machine-readable git commit messages following the Conventional Commits specification.
+description: Generate semantic git commit messages following Conventional Commits. Use this skill when the user asks to commit, commit and push, save changes, or write a commit message. Also use after completing implementation tasks that need to be committed.
 ---
 
 # Conventional Commit

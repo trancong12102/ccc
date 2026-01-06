@@ -1,6 +1,6 @@
 ---
 name: brainstorm
-description: This skill should be used when the user asks to "brainstorm", "explore ideas", "think through", "help me figure out", or "/brainstorm". Also use before creative work to clarify intent and requirements. Explores ideas through collaborative dialogue to enhance other workflows.
+description: Clarify ideas and requirements through collaborative dialogue. Use this skill when the user asks to brainstorm, explore ideas, think through a problem, or figure something out. Also use before creative work to clarify intent before implementation.
 ---
 
 # Brainstorming Ideas

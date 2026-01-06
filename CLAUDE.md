@@ -102,7 +102,7 @@ Instructions...
 ```markdown
 ---
 name: skill-name
-description: This skill should be used when the user asks to "trigger phrase 1", "trigger phrase 2", or "trigger phrase 3". Also use when [additional context]. [What it does].
+description: What the skill does. Use this skill when the user asks to [triggers]. Also use when [contextual trigger].
 ---
 
 # Skill Name
@@ -117,22 +117,21 @@ Instructions...
 - Skills are triggered by the `description` field in YAML frontmatter
 - **The description IS the trigger mechanism** - there's no separate activation logic
 - **DO NOT** add "When to Activate" sections in the body - they are redundant (body loads after triggering)
-- Use **third-person format**: "This skill should be used when..."
-- Include **quoted trigger phrases** with exact words users would say
-- Be specific: "commit changes" > "helps with git"
+- Use semantic descriptions - Claude matches intent, not exact phrases
+- Be specific about when to use: "commit changes" > "helps with git"
 
 ### Description Format
 
-Use third-person format with specific trigger phrases:
+Follow this three-part structure:
 
 ```yaml
-description: This skill should be used when the user asks to "phrase 1", "phrase 2", or "phrase 3". Also use when [context]. [What it does].
+description: [What it does]. Use this skill when [triggers]. Also use [contextual trigger].
 ```
 
 **Good example:**
 
 ```yaml
-description: This skill should be used when the user asks to "commit", "make a commit", "commit changes", "write a commit message", "run git commit", or "/commit". Also use when Claude needs to commit after implementing changes or completing a task. Generates semantic, machine-readable git commit messages following the Conventional Commits specification.
+description: Generate semantic git commit messages following Conventional Commits. Use this skill when the user asks to commit, commit and push, save changes, or write a commit message. Also use after completing implementation tasks that need to be committed.
 ```
 
 **Bad examples:**
@@ -141,11 +140,11 @@ description: This skill should be used when the user asks to "commit", "make a c
 # Too vague - no specific triggers
 description: Helps with git commits.
 
-# Missing quoted phrases
-description: Use this skill when working with commits or git.
+# Too verbose - unnecessary quoted phrases
+description: This skill should be used when the user asks to "commit", "make a commit", "commit changes", or "/commit".
 
-# First-person format
-description: Use this skill when you need to commit code.
+# Missing contextual trigger
+description: Generate commit messages for git.
 ```
 
 ### Content Structure
