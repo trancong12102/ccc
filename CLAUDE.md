@@ -1,0 +1,126 @@
+# Claude Skills Marketplace
+
+A Claude Code plugin marketplace. See [README.md](README.md) for full documentation.
+
+## Project Structure
+
+```
+claude-skills/
+├── .claude-plugin/
+│   └── marketplace.json          # Plugin registry (uses marketplace.schema.json)
+├── plugins/
+│   └── <plugin-name>/
+│       ├── .claude-plugin/
+│       │   └── plugin.json       # Plugin manifest (uses plugin.schema.json)
+│       ├── agents/*.md
+│       ├── commands/*.md
+│       └── skills/*/SKILL.md
+├── schemas/
+│   ├── marketplace.schema.json   # Schema for marketplace.json
+│   └── plugin.schema.json        # Schema for plugin.json
+└── docs/
+```
+
+## Adding a New Plugin
+
+1. Create directory: `plugins/<plugin-name>/`
+2. Create manifest: `plugins/<plugin-name>/.claude-plugin/plugin.json`
+3. Add components:
+   - `agents/*.md` - Agent definitions
+   - `commands/*.md` - Slash commands
+   - `skills/*/SKILL.md` - Skills
+4. Register in `.claude-plugin/marketplace.json`
+
+## Schemas
+
+All JSON files must reference their schema:
+
+### Plugin Manifest (`plugin.json`)
+
+```json
+{
+  "$schema": "../../../schemas/plugin.schema.json",
+  "name": "plugin-name",
+  "version": "0.1.0",
+  "description": "What the plugin does (min 10 chars)",
+  "author": { "name": "Author Name" },
+  "keywords": ["tag1", "tag2"]
+}
+```
+
+### Marketplace Entry (`marketplace.json`)
+
+```json
+{
+  "$schema": "../schemas/marketplace.schema.json",
+  "name": "marketplace-name",
+  "description": "Marketplace description",
+  "owner": { "name": "Owner", "email": "email@example.com" },
+  "plugins": [
+    {
+      "name": "plugin-name",
+      "description": "What the plugin does (min 10 chars)",
+      "version": "0.1.0",
+      "source": "../plugins/plugin-name",
+      "category": "development",
+      "tags": ["tag1", "tag2"]
+    }
+  ]
+}
+```
+
+## Categories
+
+Available: `development`, `productivity`, `utilities`, `documentation`, `testing`, `security`, `devops`, `data`
+
+## Naming Conventions
+
+- Use **kebab-case** for all names
+- Plugin names: `my-plugin`
+- Commands: `my-command.md`
+- Agents: `my-agent.md`
+- Skills: `my-skill/SKILL.md`
+
+## Component Formats
+
+### Command (commands/*.md)
+
+```markdown
+---
+name: command-name
+description: What the command does
+---
+
+# Command Name
+
+Instructions...
+```
+
+### Agent (agents/*.md)
+
+```markdown
+---
+description: Agent role and expertise
+capabilities:
+  - Capability 1
+  - Capability 2
+---
+
+# Agent Name
+
+Instructions...
+```
+
+### Skill (skills/*/SKILL.md)
+
+```markdown
+---
+name: Skill Name
+description: When to activate this skill
+version: 1.0.0
+---
+
+# Skill Name
+
+Instructions...
+```

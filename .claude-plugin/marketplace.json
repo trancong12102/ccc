@@ -1,0 +1,10 @@
+{
+  "$schema": "../schemas/marketplace.schema.json",
+  "name": "claude-skills",
+  "description": "A marketplace of skills, commands, agents, and MCP server configurations for Claude Code",
+  "owner": {
+    "name": "Cong Tran",
+    "email": "trancong12102@gmail.com"
+  },
+  "plugins": []
+}
