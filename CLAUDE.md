@@ -102,7 +102,7 @@ Instructions...
 ```markdown
 ---
 name: skill-name
-description: [What it does]. Use this skill when [trigger conditions]. [Additional context].
+description: This skill should be used when the user asks to "trigger phrase 1", "trigger phrase 2", or "trigger phrase 3". Also use when [additional context]. [What it does].
 ---
 
 # Skill Name
@@ -115,20 +115,37 @@ Instructions...
 ### Activation & Triggers
 
 - Skills are triggered by the `description` field in YAML frontmatter
-- **DO NOT** add "When to Activate" sections - they are redundant
-- Use "Use this skill when..." format for trigger conditions
-- Be specific: "Extract PDF text" > "Helps with documents"
+- **The description IS the trigger mechanism** - there's no separate activation logic
+- **DO NOT** add "When to Activate" sections in the body - they are redundant (body loads after triggering)
+- Use **third-person format**: "This skill should be used when..."
+- Include **quoted trigger phrases** with exact words users would say
+- Be specific: "commit changes" > "helps with git"
 
 ### Description Format
 
+Use third-person format with specific trigger phrases:
+
 ```yaml
-description: [What it does]. Use this skill when [trigger conditions]. [Additional context].
+description: This skill should be used when the user asks to "phrase 1", "phrase 2", or "phrase 3". Also use when [context]. [What it does].
 ```
 
-**Example:**
+**Good example:**
 
 ```yaml
-description: Generate semantic, machine-readable git commit messages. Use this skill when the user asks to commit, make a commit, or write a commit message. Follows the Conventional Commits specification.
+description: This skill should be used when the user asks to "commit", "make a commit", "commit changes", "write a commit message", "run git commit", or "/commit". Also use when Claude needs to commit after implementing changes or completing a task. Generates semantic, machine-readable git commit messages following the Conventional Commits specification.
+```
+
+**Bad examples:**
+
+```yaml
+# Too vague - no specific triggers
+description: Helps with git commits.
+
+# Missing quoted phrases
+description: Use this skill when working with commits or git.
+
+# First-person format
+description: Use this skill when you need to commit code.
 ```
 
 ### Content Structure

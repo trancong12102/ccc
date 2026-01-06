@@ -1,6 +1,6 @@
 ---
 name: conventional-commit
-description: Generate semantic, machine-readable git commit messages. Use this skill when the user asks to commit, make a commit, commit changes, write a commit message, or run git commit. Follows the Conventional Commits specification for changelog automation and semantic versioning.
+description: This skill should be used when the user asks to "commit", "make a commit", "commit changes", "write a commit message", "run git commit", or "/commit". Also use when Claude needs to commit after implementing changes or completing a task. Generates semantic, machine-readable git commit messages following the Conventional Commits specification.
 ---
 
 # Conventional Commit
