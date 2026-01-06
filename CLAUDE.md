@@ -187,3 +187,20 @@ Apply these when writing skill instructions:
 - Keep under **500 lines**
 - Use progressive disclosure for details >100 lines
 - Assume Claude knows basics - only include necessary guidance
+
+### Avoiding Shell Parse Errors
+
+Backticks in skill markdown can be misinterpreted as shell command substitution. Avoid patterns where text between backticks looks like a command:
+
+**Problematic:**
+```markdown
+- Use `!` marker OR `BREAKING CHANGE:` footer
+```
+
+The pattern `` `!` marker OR ` `` gets parsed as a shell command, causing "command not found" errors.
+
+**Safe alternatives:**
+```markdown
+- Add exclamation mark after type/scope or add BREAKING CHANGE: footer
+- Use the exclamation mark (!) or BREAKING CHANGE: footer
+```
