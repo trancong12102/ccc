@@ -37,11 +37,10 @@ claude-skills/
       "name": "plugin-name",
       "version": "1.0.0",
       "description": "What the plugin does (min 10 chars)",
-      "author": { "name": "Author Name", "email": "author@example.com" },
       "source": "./plugins/plugin-name",
       "category": "development",
       "tags": ["tag1", "tag2"],
-      "skills": ["skills/my-skill/SKILL.md"],
+      "skills": ["./skills/my-skill"],
       "license": "MIT"
     }
   ]
@@ -58,7 +57,7 @@ Available: `development`, `productivity`, `utilities`, `documentation`, `testing
 - Plugin names: `my-plugin`
 - Commands: `my-command.md`
 - Agents: `my-agent.md`
-- Skills: `my-skill/SKILL.md`
+- Skills: `./skills/my-skill` (directory path, not SKILL.md)
 
 ## Component Formats
 

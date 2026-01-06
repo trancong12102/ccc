@@ -8,16 +8,12 @@
   "plugins": [
     {
       "name": "conventional-commit",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "description": "Generate semantic, machine-readable commit messages following the Conventional Commits specification",
-      "author": {
-        "name": "Cong Tran",
-        "email": "trancong12102@gmail.com"
-      },
       "source": "./plugins/conventional-commit",
       "category": "development",
       "tags": ["git", "commit", "conventional-commits", "semantic-versioning"],
-      "skills": ["./skills/commit/SKILL.md"],
+      "skills": ["./skills/commit"],
       "license": "MIT"
     }
   ]
