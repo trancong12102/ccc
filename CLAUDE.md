@@ -7,63 +7,42 @@ A Claude Code plugin marketplace. See [README.md](README.md) for full documentat
 ```
 claude-skills/
 ├── .claude-plugin/
-│   └── marketplace.json          # Plugin registry (uses marketplace.schema.json)
+│   └── marketplace.json          # Plugin registry with full plugin definitions
 ├── plugins/
 │   └── <plugin-name>/
-│       ├── .claude-plugin/
-│       │   └── plugin.json       # Plugin manifest (uses plugin.schema.json)
 │       ├── agents/*.md
 │       ├── commands/*.md
 │       └── skills/*/SKILL.md
-├── schemas/
-│   ├── marketplace.schema.json   # Schema for marketplace.json
-│   └── plugin.schema.json        # Schema for plugin.json
 └── docs/
 ```
 
 ## Adding a New Plugin
 
 1. Create directory: `plugins/<plugin-name>/`
-2. Create manifest: `plugins/<plugin-name>/.claude-plugin/plugin.json`
-3. Add components:
+2. Add components:
    - `agents/*.md` - Agent definitions
    - `commands/*.md` - Slash commands
    - `skills/*/SKILL.md` - Skills
-4. Register in `.claude-plugin/marketplace.json`
+3. Register in `.claude-plugin/marketplace.json` with full plugin definition
 
-## Schemas
-
-All JSON files must reference their schema:
-
-### Plugin Manifest (`plugin.json`)
+## Marketplace Entry Format
 
 ```json
 {
-  "$schema": "../../../schemas/plugin.schema.json",
-  "name": "plugin-name",
-  "version": "0.1.0",
-  "description": "What the plugin does (min 10 chars)",
-  "author": { "name": "Author Name" },
-  "keywords": ["tag1", "tag2"]
-}
-```
-
-### Marketplace Entry (`marketplace.json`)
-
-```json
-{
-  "$schema": "../schemas/marketplace.schema.json",
   "name": "marketplace-name",
   "description": "Marketplace description",
   "owner": { "name": "Owner", "email": "email@example.com" },
   "plugins": [
     {
       "name": "plugin-name",
+      "version": "1.0.0",
       "description": "What the plugin does (min 10 chars)",
-      "version": "0.1.0",
-      "source": "../plugins/plugin-name",
+      "author": { "name": "Author Name", "email": "author@example.com" },
+      "source": "./plugins/plugin-name",
       "category": "development",
-      "tags": ["tag1", "tag2"]
+      "tags": ["tag1", "tag2"],
+      "skills": ["skills/my-skill/SKILL.md"],
+      "license": "MIT"
     }
   ]
 }
@@ -202,4 +181,3 @@ Apply these when writing skill instructions:
 - Keep under **500 lines**
 - Use progressive disclosure for details >100 lines
 - Assume Claude knows basics - only include necessary guidance
-

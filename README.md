@@ -36,22 +36,42 @@ See [Plugin Reference](docs/plugins.md) for the complete catalog.
 To add a new plugin:
 
 1. Create a directory in `plugins/` with the plugin name
-2. Add `.claude-plugin/plugin.json` manifest
-3. Add components in `agents/`, `commands/`, `skills/`
-4. Register the plugin in `.claude-plugin/marketplace.json`
+2. Add components in `agents/`, `commands/`, `skills/`
+3. Register the plugin in `.claude-plugin/marketplace.json`
 
 ### Plugin Structure
 
 ```text
-my-plugin/
-├── .claude-plugin/
-│   └── plugin.json         # Required manifest
-├── agents/                 # Agent definitions (.md)
-├── commands/               # Slash commands (.md)
-├── skills/                 # Skills (subdirectories with SKILL.md)
-│   └── my-skill/
-│       └── SKILL.md
-└── .mcp.json              # Optional MCP servers
+plugins/
+└── my-plugin/
+    ├── agents/                 # Agent definitions (.md)
+    ├── commands/               # Slash commands (.md)
+    ├── skills/                 # Skills (subdirectories with SKILL.md)
+    │   └── my-skill/
+    │       └── SKILL.md
+    └── .mcp.json              # Optional MCP servers
+```
+
+### Marketplace Entry
+
+All plugin metadata is defined in `.claude-plugin/marketplace.json`:
+
+```json
+{
+  "plugins": [
+    {
+      "name": "my-plugin",
+      "version": "1.0.0",
+      "description": "What the plugin does",
+      "author": { "name": "Author", "email": "author@example.com" },
+      "source": "./plugins/my-plugin",
+      "category": "development",
+      "tags": ["tag1", "tag2"],
+      "skills": ["skills/my-skill/SKILL.md"],
+      "license": "MIT"
+    }
+  ]
+}
 ```
 
 ## License
