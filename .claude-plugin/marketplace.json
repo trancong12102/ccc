@@ -7,12 +7,12 @@
   },
   "plugins": [
     {
-      "name": "conventional-commit",
-      "version": "1.1.5",
-      "description": "Generate semantic, machine-readable commit messages following the Conventional Commits specification",
-      "source": "./plugins/conventional-commit",
+      "name": "git",
+      "version": "1.0.0",
+      "description": "Git workflow automation toolkit with conventional commits, PR management, and more",
+      "source": "./plugins/git",
       "category": "development",
-      "tags": ["git", "commit", "conventional-commits", "semantic-versioning"],
+      "tags": ["git", "commit", "conventional-commits", "semantic-versioning", "workflow"],
       "skills": ["./skills/commit"],
       "license": "MIT"
     }
