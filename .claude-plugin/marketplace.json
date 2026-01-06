@@ -1,5 +1,4 @@
 {
-  "$schema": "../schemas/marketplace.schema.json",
   "name": "claude-skills",
   "description": "A marketplace of skills, commands, agents, and MCP server configurations for Claude Code",
   "owner": {
@@ -10,7 +9,6 @@
     {
       "name": "conventional-commit",
       "description": "Generate semantic, machine-readable commit messages following the Conventional Commits specification",
-      "version": "1.0.0",
       "source": "./plugins/conventional-commit",
       "category": "development",
       "tags": ["git", "commit", "conventional-commits", "semantic-versioning"]

@@ -1,7 +1,6 @@
 {
-  "$schema": "../../../schemas/plugin.schema.json",
   "name": "conventional-commit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generate semantic, machine-readable commit messages following the Conventional Commits specification",
   "author": {
     "name": "Cong Tran",
@@ -14,5 +13,8 @@
     "semantic-versioning",
     "changelog"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "skills": [
+    "skills/commit/SKILL.md"
+  ]
 }
