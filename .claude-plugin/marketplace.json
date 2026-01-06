@@ -11,7 +11,7 @@
       "name": "conventional-commit",
       "description": "Generate semantic, machine-readable commit messages following the Conventional Commits specification",
       "version": "1.0.0",
-      "source": "../plugins/conventional-commit",
+      "source": "./plugins/conventional-commit",
       "category": "development",
       "tags": ["git", "commit", "conventional-commits", "semantic-versioning"]
     }
