@@ -51,6 +51,14 @@ claude-skills/
 
 Available: `development`, `productivity`, `utilities`, `documentation`, `testing`, `security`, `devops`, `data`
 
+## Versioning
+
+Plugin versions follow [Semantic Versioning](https://semver.org/): `MAJOR.MINOR.PATCH`
+
+- **MAJOR**: Breaking changes
+- **MINOR**: New features (backward compatible)
+- **PATCH**: Bug fixes (backward compatible)
+
 ## Naming Conventions
 
 - Use **kebab-case** for all names
