@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "conventional-commit",
-      "version": "1.0.3",
+      "version": "1.0.4",
       "description": "Generate semantic, machine-readable commit messages following the Conventional Commits specification",
       "source": "./plugins/conventional-commit",
       "category": "development",

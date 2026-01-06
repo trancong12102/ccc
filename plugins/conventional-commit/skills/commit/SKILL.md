@@ -1,7 +1,6 @@
 ---
-name: Conventional Commit
-description: Activate when creating git commits, committing changes, or writing commit messages. Generates semantic, machine-readable messages following the Conventional Commits specification for changelog automation and semantic versioning.
-version: 1.1.0
+name: conventional-commit
+description: Generate semantic, machine-readable git commit messages. Use this skill when the user asks to commit, make a commit, commit changes, write a commit message, or run git commit. Follows the Conventional Commits specification for changelog automation and semantic versioning.
 ---
 
 # Conventional Commit

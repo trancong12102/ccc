@@ -93,9 +93,8 @@ Instructions...
 
 ```markdown
 ---
-name: Skill Name
-description: Activate when [trigger conditions]. [What it does] for [use case].
-version: 1.0.0
+name: skill-name
+description: [What it does]. Use this skill when [trigger conditions]. [Additional context].
 ---
 
 # Skill Name
@@ -109,19 +108,19 @@ Instructions...
 
 - Skills are triggered by the `description` field in YAML frontmatter
 - **DO NOT** add "When to Activate" sections - they are redundant
-- Include trigger keywords in description: "Activate when creating X, doing Y, or running Z"
+- Use "Use this skill when..." format for trigger conditions
 - Be specific: "Extract PDF text" > "Helps with documents"
 
 ### Description Format
 
 ```yaml
-description: Activate when [trigger conditions]. [What it does] for [use case].
+description: [What it does]. Use this skill when [trigger conditions]. [Additional context].
 ```
 
 **Example:**
 
 ```yaml
-description: Activate when creating git commits, committing changes, or writing commit messages. Generates semantic messages following Conventional Commits for changelog automation.
+description: Generate semantic, machine-readable git commit messages. Use this skill when the user asks to commit, make a commit, or write a commit message. Follows the Conventional Commits specification.
 ```
 
 ### Content Structure
