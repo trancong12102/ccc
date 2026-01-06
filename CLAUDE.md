@@ -4,7 +4,7 @@ A Claude Code plugin marketplace. See [README.md](README.md) for full documentat
 
 ## Project Structure
 
-```
+```bash
 claude-skills/
 ├── .claude-plugin/
 │   └── marketplace.json          # Plugin registry with full plugin definitions
@@ -193,6 +193,7 @@ Apply these when writing skill instructions:
 Backticks in skill markdown can be misinterpreted as shell command substitution. Avoid patterns where text between backticks looks like a command:
 
 **Problematic:**
+
 ```markdown
 - Use `!` marker OR `BREAKING CHANGE:` footer
 ```
@@ -200,6 +201,7 @@ Backticks in skill markdown can be misinterpreted as shell command substitution.
 The pattern `` `!` marker OR ` `` gets parsed as a shell command, causing "command not found" errors.
 
 **Safe alternatives:**
+
 ```markdown
 - Add exclamation mark after type/scope or add BREAKING CHANGE: footer
 - Use the exclamation mark (!) or BREAKING CHANGE: footer

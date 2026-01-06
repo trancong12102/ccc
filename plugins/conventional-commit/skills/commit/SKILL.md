@@ -61,6 +61,7 @@ git log --oneline -10
 ```
 
 **Then analyze**:
+
 1. What changed and why?
 2. Which type best describes this change?
 3. What scope applies (api, ui, auth, etc.)?
@@ -99,16 +100,19 @@ EOF
 ## Examples
 
 **Simple feature:**
+
 ```text
 feat(auth): add password reset functionality
 ```
 
 **Bug fix with scope:**
+
 ```text
 fix(api): handle null response from external service
 ```
 
 **Feature with body:**
+
 ```text
 feat(dashboard): add real-time notifications
 
@@ -117,6 +121,7 @@ Users can now receive instant updates without page refresh.
 ```
 
 **Breaking change:**
+
 ```text
 feat(api)!: migrate to v2 authentication tokens
 
