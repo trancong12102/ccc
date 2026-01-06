@@ -87,7 +87,7 @@ EOF
 - **Keep description under 50 characters**, no period at end
 - **Body explains the why**, not the what - wrap at 72 characters
 - **Scope is a noun** describing affected area: `api`, `ui`, `auth`, `parser`
-- **Breaking changes**: Add `!` after type/scope or use `BREAKING CHANGE:` in footer
+- **Breaking changes**: Add exclamation mark after type/scope or add BREAKING CHANGE: footer
 
 ## Footer Tokens
 
