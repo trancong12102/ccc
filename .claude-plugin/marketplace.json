@@ -15,16 +15,6 @@
       "tags": ["git", "commit", "conventional-commits", "semantic-versioning", "workflow"],
       "skills": ["./skills/commit"],
       "license": "MIT"
-    },
-    {
-      "name": "ideate",
-      "version": "1.0.0",
-      "description": "Collaborative ideation skill that clarifies ideas through dialogue before handing off to other workflows",
-      "source": "./plugins/ideate",
-      "category": "productivity",
-      "tags": ["ideate", "brainstorm", "planning", "ideas", "creative"],
-      "skills": ["./skills/brainstorm"],
-      "license": "MIT"
     }
   ]
 }
