@@ -15,6 +15,16 @@
       "tags": ["git", "commit", "conventional-commits", "semantic-versioning", "workflow"],
       "skills": ["./skills/commit"],
       "license": "MIT"
+    },
+    {
+      "name": "package-versions",
+      "version": "1.0.0",
+      "description": "Look up latest package versions from deps.dev API across npm, PyPI, Go, Maven, Cargo, and NuGet",
+      "source": "./plugins/package-versions",
+      "category": "development",
+      "tags": ["dependencies", "packages", "versions", "deps.dev"],
+      "skills": ["./skills/latest-version"],
+      "license": "MIT"
     }
   ]
 }
