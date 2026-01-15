@@ -34,7 +34,8 @@ Think step-by-step:
 2. **Run the get-versions script**:
 
 ```bash
-python3 ${CLAUDE_PLUGIN_ROOT}/scripts/get-versions.py <system> <pkg1> [pkg2] ...
+SCRIPT=${CLAUDE_PLUGIN_ROOT}/skills/latest-version/scripts/get-versions.py
+python3 $SCRIPT <system> <pkg1> [pkg2] ...
 ```
 
 1. **Report the results** from the JSON output
@@ -44,21 +45,24 @@ python3 ${CLAUDE_PLUGIN_ROOT}/scripts/get-versions.py <system> <pkg1> [pkg2] ...
 **Single package:**
 
 ```bash
-python3 ${CLAUDE_PLUGIN_ROOT}/scripts/get-versions.py npm express
+SCRIPT=${CLAUDE_PLUGIN_ROOT}/skills/latest-version/scripts/get-versions.py
+python3 $SCRIPT npm express
 ```
 
 **Multiple packages:**
 
 ```bash
-python3 ${CLAUDE_PLUGIN_ROOT}/scripts/get-versions.py npm express lodash @types/node
+SCRIPT=${CLAUDE_PLUGIN_ROOT}/skills/latest-version/scripts/get-versions.py
+python3 $SCRIPT npm express lodash @types/node
 ```
 
 **Different ecosystems:**
 
 ```bash
-python3 ${CLAUDE_PLUGIN_ROOT}/scripts/get-versions.py pypi requests django flask
-python3 ${CLAUDE_PLUGIN_ROOT}/scripts/get-versions.py go github.com/gin-gonic/gin
-python3 ${CLAUDE_PLUGIN_ROOT}/scripts/get-versions.py maven org.springframework:spring-core
+SCRIPT=${CLAUDE_PLUGIN_ROOT}/skills/latest-version/scripts/get-versions.py
+python3 $SCRIPT pypi requests django flask
+python3 $SCRIPT go github.com/gin-gonic/gin
+python3 $SCRIPT maven org.springframework:spring-core
 ```
 
 ## Output Format
