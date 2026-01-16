@@ -5,7 +5,9 @@ input=$(cat)
 command=$(echo "$input" | jq -r '.tool_input.command // ""')
 
 # Regex pattern for package install commands
-pattern='(npm|yarn|pnpm|bun)\s+(add|install|i)\s+[^-]|(pip|pip3)\s+install\s+[^-]|cargo\s+add\s+|go\s+get\s+'
+# Uses \S (any non-whitespace) to match commands with flags before package names
+# e.g., "npm install --save-dev jest" should trigger the reminder
+pattern='(npm|yarn|pnpm|bun)\s+(add|install|i)\s+\S|(pip|pip3)\s+install\s+\S|cargo\s+add\s+\S|go\s+get\s+\S'
 
 if echo "$command" | grep -qE "$pattern"; then
   cat <<EOF
