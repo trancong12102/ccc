@@ -18,13 +18,13 @@
     },
     {
       "name": "package-versions",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "description": "Look up latest package versions from deps.dev API across npm, PyPI, Go, Maven, Cargo, and NuGet",
       "source": "./plugins/package-versions",
       "category": "development",
       "tags": ["dependencies", "packages", "versions", "deps.dev"],
       "skills": ["./skills/latest-version"],
-      "hooks": ["./hooks"],
+      "hooks": "./hooks/hooks.json",
       "license": "MIT"
     }
   ]
