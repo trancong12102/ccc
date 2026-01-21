@@ -1,5 +1,5 @@
 {
-  "name": "claude-skills",
+  "name": "ccc",
   "description": "A marketplace of skills, commands, agents, and MCP server configurations for Claude Code",
   "owner": {
     "name": "Cong Tran",
@@ -7,23 +7,10 @@
   },
   "plugins": [
     {
-      "name": "git",
-      "version": "1.1.0",
-      "description": "Git workflow automation toolkit with conventional commits, PR management, and more",
-      "source": "./plugins/git",
-      "category": "development",
-      "tags": ["git", "commit", "conventional-commits", "semantic-versioning", "workflow"],
-      "skills": ["./skills/commit"],
-      "license": "MIT"
-    },
-    {
-      "name": "package-versions",
-      "version": "1.2.0",
-      "description": "Look up latest package versions from deps.dev API across npm, PyPI, Go, Maven, Cargo, and NuGet",
-      "source": "./plugins/package-versions",
-      "category": "development",
-      "tags": ["dependencies", "packages", "versions", "deps.dev"],
-      "skills": ["./skills/latest-version"],
+      "name": "ccc-core",
+      "version": "1.0.0",
+      "description": "Opinionated Claude Code plugin",
+      "source": "./core",
       "license": "MIT"
     }
   ]

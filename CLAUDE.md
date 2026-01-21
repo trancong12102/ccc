@@ -4,68 +4,25 @@ A Claude Code plugin marketplace. See [README.md](README.md) for full documentat
 
 ## Project Structure
 
-```bash
-claude-skills/
+```
+ccc/
+├── core/                    # Main plugin
+│   ├── agents/              # Agent definitions (empty)
+│   └── skills/              # Skill implementations
+│       ├── brainstorming/
+│       ├── context7/        # Library documentation lookup
+│       │   └── references/
+│       ├── conventional-commit/
+│       ├── deps-dev/        # Package version lookup
+│       ├── exa/             # Web search and crawling
+│       │   └── references/
+│       ├── oracle/          # Deep analysis via reasoning model
+│       └── test-driven-development/
+│           └── references/
 ├── .claude-plugin/
-│   └── marketplace.json          # Plugin registry with full plugin definitions
-├── plugins/
-│   └── <plugin-name>/
-│       ├── agents/*.md
-│       ├── commands/*.md
-│       └── skills/*/SKILL.md
-└── docs/
+│   └── marketplace.json     # Marketplace registry
+└── .markdownlint.json       # Markdown linting config
 ```
-
-## Adding a New Plugin
-
-1. Create directory: `plugins/<plugin-name>/`
-2. Add components:
-   - `agents/*.md` - Agent definitions
-   - `commands/*.md` - Slash commands
-   - `skills/*/SKILL.md` - Skills
-3. Register in `.claude-plugin/marketplace.json` with full plugin definition
-
-## Marketplace Entry Format
-
-```json
-{
-  "name": "marketplace-name",
-  "description": "Marketplace description",
-  "owner": { "name": "Owner", "email": "email@example.com" },
-  "plugins": [
-    {
-      "name": "plugin-name",
-      "version": "1.0.0",
-      "description": "What the plugin does (min 10 chars)",
-      "source": "./plugins/plugin-name",
-      "category": "development",
-      "tags": ["tag1", "tag2"],
-      "skills": ["./skills/my-skill"],
-      "license": "MIT"
-    }
-  ]
-}
-```
-
-## Categories
-
-Available: `development`, `productivity`, `utilities`, `documentation`, `testing`, `security`, `devops`, `data`
-
-## Versioning
-
-Plugin versions follow [Semantic Versioning](https://semver.org/): `MAJOR.MINOR.PATCH`
-
-- **MAJOR**: Breaking changes
-- **MINOR**: New features (backward compatible)
-- **PATCH**: Bug fixes (backward compatible)
-
-## Naming Conventions
-
-- Use **kebab-case** for all names
-- Plugin names: `my-plugin`
-- Commands: `my-command.md`
-- Agents: `my-agent.md`
-- Skills: `./skills/my-skill` (directory path, not SKILL.md)
 
 ## Component Formats
 
