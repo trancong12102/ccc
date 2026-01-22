@@ -37,7 +37,7 @@ bunx add-skill -a antigravity -y -g trancong12102/ccc
 |-------|-------------|
 | **brainstorming** | Collaboratively explore ideas through guided dialogue before implementation |
 | **context7** | Look up documentation for any library using Context7 |
-| **conventional-commit** | Generate git commit messages following Conventional Commits spec |
+| **commit** | Generate git commit messages following Conventional Commits spec |
 | **deps-dev** | Look up latest package versions using deps.dev API |
 | **exa** | Web search, crawling, and code context retrieval |
 | **oracle** | Deep analysis via powerful reasoning model (Codex CLI) |
@@ -82,6 +82,14 @@ Some skills require API keys to be set as environment variables:
 | `EXA_API_KEY` | exa | API key for Exa web search and content extraction |
 
 ## Setup Notes
+
+### Enable Marketplace Auto-Update
+
+To keep your plugins up to date automatically, enable marketplace auto-update in your Claude Code settings:
+
+```bash
+claude config set plugins.marketplace.auto_update true
+```
 
 ### Oracle Skill
 

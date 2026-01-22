@@ -28,10 +28,12 @@ bash scripts/sync-external.sh
 ### Skill Definition Format
 
 Each skill is a `SKILL.md` file with:
+
 1. **YAML frontmatter** - Required fields: `name`, `description`
 2. **Markdown content** - Instructions that guide Claude on how to perform the skill
 
 Example structure:
+
 ```markdown
 ---
 name: skill-name
@@ -53,6 +55,7 @@ Step-by-step guidance...
 ### Vendoring Pattern
 
 External skills are managed via git submodules in `/vendor`. The sync script (`scripts/sync-external.sh`) copies specific skills to `/external/skills/`. To add a new external skill:
+
 1. Add/update the submodule in `/vendor`
 2. Add a copy command in `sync-external.sh`
 3. Run `bash scripts/sync-external.sh`
@@ -63,3 +66,8 @@ External skills are managed via git submodules in `/vendor`. The sync script (`s
 - The `description` field determines when the skill is invoked - make it specific with trigger phrases
 - Use structured tools like `AskUserQuestion` for user interaction
 - Never modify files in `external/skills/` directly - they are overwritten by the sync script
+
+## Before Committing
+
+1. **Lint markdown files**: Run `bunx markdownlint-cli2` to check for markdown lint errors
+2. **Bump version**: If any skill files changed, increment the version in `.claude-plugin/marketplace.json`

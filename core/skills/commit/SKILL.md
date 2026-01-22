@@ -1,5 +1,5 @@
 ---
-name: conventional-commit
+name: commit
 description: Generates git commit messages following Conventional Commits 1.0.0 specification with semantic types (feat, fix, etc.), optional scope, and breaking change annotations. Use when committing code changes or creating commit messages.
 ---
 
