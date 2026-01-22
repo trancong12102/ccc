@@ -1,0 +1,16 @@
+{
+  "ignores": ["core/skills/ast-grep/**"],
+  "config": {
+    "default": true,
+    "MD013": false,
+    "MD024": {
+      "siblings_only": true
+    },
+    "MD033": {
+      "allowed_elements": ["Good", "Bad", "details", "summary"]
+    },
+    "MD036": false,
+    "MD040": false,
+    "MD060": false
+  }
+}
