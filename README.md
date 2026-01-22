@@ -45,7 +45,7 @@ bunx add-skill -a antigravity -y -g trancong12102/ccc
 
 ## External Skills (ccc-external)
 
-Skills synced from third-party repositories:
+Skills synced from third-party repositories. These are automatically checked for updates daily.
 
 | Skill | Source | Description |
 |-------|--------|-------------|
