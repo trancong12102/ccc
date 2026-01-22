@@ -23,4 +23,9 @@ echo "  - web-design-guidelines"
 rm -rf "$ROOT_DIR/external/skills/web-design-guidelines"
 cp -r "$ROOT_DIR/vendor/vercel-agent-skills/skills/web-design-guidelines" "$ROOT_DIR/external/skills/web-design-guidelines"
 
+# design-postgres-tables skill
+echo "  - design-postgres-tables"
+rm -rf "$ROOT_DIR/external/skills/design-postgres-tables"
+cp -r "$ROOT_DIR/vendor/timescale-pg-aiguide/skills/design-postgres-tables" "$ROOT_DIR/external/skills/design-postgres-tables"
+
 echo "Done."
