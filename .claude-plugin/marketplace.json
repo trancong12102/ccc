@@ -12,22 +12,6 @@
       "description": "Opinionated Claude Code plugin",
       "source": "./core",
       "license": "MIT"
-    },
-    {
-      "name": "agent-browser",
-      "description": "Automates browser interactions for web testing, form filling, screenshots, and data extraction",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/vercel-labs/agent-browser.git"
-      },
-      "homepage": "https://github.com/vercel-labs/agent-browser.git"
-    },
-    {
-      "name": "ccc-external",
-      "version": "1.0.0",
-      "description": "External skills synced from vendor submodules (ast-grep, etc.)",
-      "source": "./external",
-      "license": "MIT"
     }
   ]
 }
