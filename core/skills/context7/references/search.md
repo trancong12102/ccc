@@ -1,7 +1,5 @@
 # Search Reference
 
-**Load when:** finding library IDs or exploring available libraries.
-
 ## Endpoint
 
 ```

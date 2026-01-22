@@ -51,6 +51,14 @@ Think step-by-step when using Context7:
 2. **Query docs** - Use the library ID with the context endpoint to get relevant documentation
 3. **Refine if needed** - Use specific queries or version parameters to narrow results
 
+## When to Use Each Endpoint
+
+| Use `/libs/search` | Use `/context` |
+| ------------------ | -------------- |
+| Finding library IDs | Querying documentation |
+| Exploring available libraries | Getting code examples |
+| Unknown or ambiguous library name | You have a library ID |
+
 ## Common Library IDs
 
 | Library | ID |

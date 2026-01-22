@@ -1,7 +1,5 @@
 # Docs Reference
 
-**Load when:** querying library documentation or code examples.
-
 ## Endpoint
 
 ```
