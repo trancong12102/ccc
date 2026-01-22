@@ -37,14 +37,14 @@ bunx add-skill -a antigravity -y -g trancong12102/ccc
 | **conventional-commit** | Generate git commit messages following Conventional Commits spec |
 | **deps-dev** | Look up latest package versions using deps.dev API |
 | **exa** | Web search, crawling, and code context retrieval |
-| **oracle** | Deep analysis via powerful reasoning model (Codex MCP) |
+| **oracle** | Deep analysis via powerful reasoning model (Codex CLI) |
 | **test-driven-development** | Guide strict TDD using Red-Green-Refactor cycle |
 
 ## Setup Notes
 
 ### Oracle Skill
 
-The oracle skill requires **Codex MCP** to be configured in Claude Code (or other agents). Add the Codex MCP server to your configuration to enable invoking gpt-5.2 (xhigh) for complex reasoning tasks.
+The oracle skill requires **Codex CLI** to be installed. Install it and configure the profile below to enable invoking gpt-5.2 (xhigh) for complex reasoning tasks.
 
 Add this profile to your Codex `config.toml`:
 
@@ -62,7 +62,7 @@ network_access = true
 web_search_request = true
 ```
 
-See the [Codex MCP documentation](https://github.com/openai/codex) for setup instructions.
+See the [Codex CLI documentation](https://github.com/openai/codex) for setup instructions.
 
 ## License
 

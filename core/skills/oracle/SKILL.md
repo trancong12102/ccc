@@ -99,28 +99,28 @@ Think step-by-step:
 1. **Gather context first**: Identify relevant files and the specific problem
 2. **Formulate a focused prompt**: Include file references with `@`, state the goal directly
 3. **Invoke the oracle**: Run `codex exec --profile oracle "prompt"`
-4. **Continue if needed**: Use `codex exec resume --last "follow-up"` to refine analysis
+4. **Continue if needed**: Use `codex exec resume SESSION_ID "follow-up"` to refine analysis
 5. **Act on the analysis**: Implement recommendations from the oracle's response
 
 ## Continuing Conversations
 
-Use `codex exec resume` to continue until satisfied:
+Use `codex exec resume SESSION_ID` to continue until satisfied. The session ID is returned from the initial invocation.
 
 ```bash
-# Initial analysis
+# Initial analysis (returns session ID)
 codex exec --profile oracle "Review @src/auth/jwt.ts for security vulnerabilities"
+# Output includes: Session ID: abc123...
 
-# Continue with follow-up questions
-codex exec resume --last "Also check for timing attacks in the token validation"
+# Continue with follow-up questions using the session ID
+codex exec resume abc123 "Also check for timing attacks in the token validation"
 
-# Keep refining
-codex exec resume --last "What about the refresh token rotation logic?"
+# Keep refining with the same session
+codex exec resume abc123 "What about the refresh token rotation logic?"
 ```
 
-| Option | Description |
-| ------ | ----------- |
-| `--last` | Resume most recent session automatically |
-| `SESSION_ID` | Resume specific session by UUID |
+| Argument | Description |
+| -------- | ----------- |
+| `SESSION_ID` | Session ID returned from the initial invocation |
 | `PROMPT` | Follow-up instruction to send after resuming |
 
 ## Rules
