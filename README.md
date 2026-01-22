@@ -85,11 +85,7 @@ Some skills require API keys to be set as environment variables:
 
 ### Enable Marketplace Auto-Update
 
-To keep your plugins up to date automatically, enable marketplace auto-update in your Claude Code settings:
-
-```bash
-claude config set plugins.marketplace.auto_update true
-```
+To keep your plugins up to date automatically, enable marketplaces auto-update in your Claude Code settings
 
 ### Oracle Skill
 
