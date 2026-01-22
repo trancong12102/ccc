@@ -12,6 +12,16 @@
       "description": "Opinionated Claude Code plugin",
       "source": "./core",
       "license": "MIT"
+    },
+    {
+      "name": "agent-browser",
+      "description": "Automates browser interactions for web testing, form filling, screenshots, and data extraction",
+      "category": "development",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/vercel-labs/agent-browser.git"
+      },
+      "homepage": "https://github.com/vercel-labs/agent-browser.git"
     }
   ]
 }
