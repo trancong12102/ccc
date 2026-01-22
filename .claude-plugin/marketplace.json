@@ -21,15 +21,6 @@
         "url": "https://github.com/vercel-labs/agent-browser.git"
       },
       "homepage": "https://github.com/vercel-labs/agent-browser.git"
-    },
-    {
-      "name": "ast-grep",
-      "description": "Guide for writing ast-grep rules to perform structural code search and analysis. Use when users need to search codebases using Abstract Syntax Tree (AST) patterns, find specific code structures, or perform complex code queries that go beyond simple text search.",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/ast-grep/agent-skill.git"
-      },
-      "homepage": "https://github.com/ast-grep/agent-skill.git"
     }
   ]
 }
