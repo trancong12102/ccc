@@ -12,6 +12,13 @@
       "description": "Opinionated Claude Code plugin",
       "source": "./core",
       "license": "MIT"
+    },
+    {
+      "name": "ccc-external",
+      "version": "1.0.0",
+      "description": "External skills from third-party repositories",
+      "source": "./external",
+      "license": "MIT"
     }
   ]
 }

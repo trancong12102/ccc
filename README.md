@@ -18,6 +18,9 @@
 
 # Install core plugin
 /plugin install ccc-core@ccc
+
+# Install external skills plugin
+/plugin install ccc-external@ccc
 ```
 
 ## Use with Other Coding Agents
@@ -39,6 +42,35 @@ bunx add-skill -a antigravity -y -g trancong12102/ccc
 | **exa** | Web search, crawling, and code context retrieval |
 | **oracle** | Deep analysis via powerful reasoning model (Codex CLI) |
 | **test-driven-development** | Guide strict TDD using Red-Green-Refactor cycle |
+
+## External Skills (ccc-external)
+
+Skills synced from third-party repositories:
+
+| Skill | Source | Description |
+|-------|--------|-------------|
+| **logging-best-practices** | [boristane/agent-skills](https://github.com/boristane/agent-skills) | Logging best practices focused on wide events for debugging and analytics |
+| **react-best-practices** | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) | React and Next.js performance optimization guidelines |
+| **web-design-guidelines** | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) | Web interface design guidelines for UI code review |
+
+## Recommended Marketplaces
+
+These community skills work great alongside this marketplace:
+
+| Repository | Description |
+|------------|-------------|
+| [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) | Browser automation for web testing, form filling, screenshots, and data extraction |
+| [ast-grep/claude-skill](https://github.com/ast-grep/claude-skill) | Structural code search using AST patterns |
+
+Install external skills:
+
+```bash
+# Using Claude Code
+/plugin marketplace add <owner>/<repo>
+
+# Using add-skill (for other agents)
+bunx add-skill -a antigravity -y -g <owner>/<repo>
+```
 
 ## Setup Notes
 
