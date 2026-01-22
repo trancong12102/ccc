@@ -72,6 +72,15 @@ Install external skills:
 bunx add-skill -a antigravity -y -g <owner>/<repo>
 ```
 
+## Prerequisites
+
+Some skills require API keys to be set as environment variables:
+
+| Variable | Skill | Description |
+|----------|-------|-------------|
+| `CONTEXT7_API_KEY` | context7 | API key for Context7 documentation lookup |
+| `EXA_API_KEY` | exa | API key for Exa web search and content extraction |
+
 ## Setup Notes
 
 ### Oracle Skill
