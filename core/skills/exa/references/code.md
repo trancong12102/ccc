@@ -1,7 +1,5 @@
 # Code Reference
 
-**Load when:** searching for programming examples or code context.
-
 ## Endpoint
 
 ```
@@ -116,15 +114,6 @@ Be specific about:
 | 5000 (default) | Standard examples |
 | 10000-20000 | Detailed patterns |
 | 30000-50000 | Comprehensive research |
-
-## When to Use Code vs Search
-
-| Use Code | Use Search |
-| -------- | ---------- |
-| Programming questions | General web research |
-| API/library usage | News and articles |
-| Code examples | Documentation lookup |
-| Implementation patterns | Non-code topics |
 
 ## Error Handling
 

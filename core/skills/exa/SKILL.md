@@ -64,9 +64,9 @@ curl -X POST 'https://api.exa.ai/context' \
 Think step-by-step when using Exa:
 
 1. **Choose the right endpoint** based on the task:
-   - Web research → `/search`
-   - Known URL → `/contents`
-   - Programming help → `/context`
+   - Web research, searching topics → `/search`
+   - Extracting content from specific URLs → `/contents`
+   - Programming examples, code context → `/context`
 
 2. **Select search type** for `/search`:
    - `fast` - Quick results, lower latency
@@ -74,6 +74,15 @@ Think step-by-step when using Exa:
    - `deep` - Comprehensive, higher quality
 
 3. **Request content when needed** using `"text": true` or `"context": true`
+
+## When to Use Each Endpoint
+
+| Use `/search` | Use `/contents` | Use `/context` |
+| ------------- | --------------- | -------------- |
+| Finding relevant pages | You have a specific URL | Programming questions |
+| General web research | Extracting known content | API/library usage |
+| News and articles | Reading documentation | Code examples |
+| Exploring options | Getting full article text | Implementation patterns |
 
 ## Search Types
 

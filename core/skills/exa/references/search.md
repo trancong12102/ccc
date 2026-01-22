@@ -1,7 +1,5 @@
 # Search Reference
 
-**Load when:** performing web searches or researching topics.
-
 ## Endpoint
 
 ```

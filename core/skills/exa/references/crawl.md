@@ -1,7 +1,5 @@
 # Crawl Reference
 
-**Load when:** extracting content from specific URLs.
-
 ## Endpoint
 
 ```
@@ -77,15 +75,6 @@ curl -X POST 'https://api.exa.ai/contents' \
 | Read documentation | `{"urls": ["https://docs.lib.com/api"], "text": true}` |
 | Extract article content | `{"urls": ["https://blog.com/post"], "text": true}` |
 | Get README content | `{"urls": ["https://github.com/org/repo"], "text": true}` |
-
-## When to Use Crawl vs Search
-
-| Use Crawl | Use Search |
-| --------- | ---------- |
-| You have a specific URL | You need to find relevant pages |
-| Extracting known content | Researching a topic |
-| Reading documentation | Exploring options |
-| Getting full article text | Finding examples |
 
 ## Error Handling
 
