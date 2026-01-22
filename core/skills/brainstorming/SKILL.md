@@ -37,6 +37,7 @@ Start by understanding the current project context, then ask questions one at a 
 - Propose 2-3 different approaches with trade-offs
 - Present options conversationally with your recommendation and reasoning
 - Lead with your recommended option and explain why
+- **Consult the Oracle** when facing complex architectural decisions (see below)
 
 **Presenting the design:**
 
@@ -50,9 +51,38 @@ Start by understanding the current project context, then ask questions one at a 
 
 - **Use AskUserQuestion tool** - Always use the tool for structured user input
 - **Recommend with reasoning** - Every question must include your recommendation and why
+- **Consult Oracle proactively** - Get second opinions on complex decisions
 - **One question at a time** - Don't overwhelm with multiple questions
 - **Multiple choice preferred** - Easier to answer than open-ended when possible
 - **YAGNI ruthlessly** - Remove unnecessary features from all designs
 - **Explore alternatives** - Always propose 2-3 approaches before settling
 - **Incremental validation** - Present design in sections, validate each
 - **Be flexible** - Go back and clarify when something doesn't make sense
+
+## Oracle Consultation
+
+**Proactively invoke the Oracle skill** to get a second opinion when:
+
+- **Complex architectural decisions** - Multiple viable patterns with significant trade-offs (e.g., microservices vs monolith, event-driven vs request-response)
+- **Security-sensitive designs** - Authentication flows, data encryption, access control patterns
+- **Performance-critical choices** - Caching strategies, database indexing, algorithm selection
+- **You're uncertain** - When you have a recommendation but want validation before presenting to the user
+
+### How to Consult
+
+Use the **Skill tool** to invoke the oracle: `Skill(skill: "oracle")`. The oracle's instructions will be loaded and guide you through the consultation process.
+
+### Reaching Consensus
+
+When Oracle's opinion differs from yours:
+
+1. **Present both perspectives** to the user with clear reasoning
+2. **Highlight where opinions align** - these are likely the right choices
+3. **Explain disagreements honestly** - "Oracle suggests X because [reason], but I lean toward Y because [reason]"
+4. **Let the user decide** on contentious points with full context
+
+### When NOT to Consult
+
+- Simple, straightforward decisions with obvious answers
+- Minor implementation details that don't affect architecture
+- When the user has already expressed a strong preference
