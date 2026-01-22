@@ -1,5 +1,5 @@
 {
-  "ignores": ["core/skills/ast-grep/**"],
+  "ignores": ["external/**"],
   "config": {
     "default": true,
     "MD013": false,

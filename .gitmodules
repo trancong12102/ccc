@@ -1,0 +1,3 @@
+[submodule "vendor/ast-grep-agent-skill"]
+	path = vendor/ast-grep-agent-skill
+	url = https://github.com/ast-grep/agent-skill
