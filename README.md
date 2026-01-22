@@ -20,6 +20,14 @@
 /plugin install ccc-core@ccc
 ```
 
+## Use with Other Coding Agents
+
+Install skills using Vercel's add-skill:
+
+```bash
+bunx add-skill -a antigravity -y -g trancong12102/ccc
+```
+
 ## Available Skills
 
 | Skill | Description |
