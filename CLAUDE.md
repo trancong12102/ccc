@@ -70,4 +70,7 @@ External skills are managed via git submodules in `/vendor`. The sync script (`s
 ## Before Committing
 
 1. **Lint markdown files**: Run `bunx markdownlint-cli2` to check for markdown lint errors
-2. **Bump version**: If any skill files changed, increment the version in `.claude-plugin/marketplace.json`
+2. **Bump version**: Follow semantic versioning for `.claude-plugin/marketplace.json`:
+   - **Major** (x.0.0): Breaking changes to existing skills/agents
+   - **Minor** (0.x.0): New features (new skills, agents, commands)
+   - **Patch** (0.0.x): Bug fixes, documentation updates, minor improvements
