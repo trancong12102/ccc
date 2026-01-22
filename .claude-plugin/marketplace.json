@@ -27,7 +27,7 @@
       "description": "Guide for writing ast-grep rules to perform structural code search and analysis. Use when users need to search codebases using Abstract Syntax Tree (AST) patterns, find specific code structures, or perform complex code queries that go beyond simple text search.",
       "source": {
         "source": "url",
-        "url": "https://github.com/ast-grep/agent-skill.git"
+        "url": "https://github.com/ast-grep/agent-skill/tree/main/ast-grep"
       },
       "homepage": "https://github.com/ast-grep/agent-skill.git"
     }
