@@ -94,6 +94,7 @@ Think step-by-step when using Exa:
 
 ## Rules
 
+- **Current year is 2026** - Use this for date-relative queries (e.g., "latest", "recent", "this year")
 - Use `"type": "fast"` for simple factual queries
 - Use `"type": "deep"` for research requiring comprehensive results
 - Add `"text": true` to get full page content in search results
