@@ -63,6 +63,7 @@ def make_request(endpoint: str, data: dict) -> dict:
         headers={
             "x-api-key": api_key,
             "Content-Type": "application/json",
+            "User-Agent": "exa-cli/1.0",
         },
         method="POST",
     )
