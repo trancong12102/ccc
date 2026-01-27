@@ -1,109 +1,92 @@
 ---
 name: exa
-description: Search the web and extract content using Exa AI. Use this skill when searching for current information, researching topics, fetching content from URLs, finding code examples, or when the user needs real-time web data. Also use for competitive research, finding similar pages, or extracting structured content from websites.
+description: Search the web and extract content using Exa AI. Use when searching for current information, researching topics, fetching content from URLs, or finding code examples. Also use for competitive research, finding similar pages, or extracting structured content.
 ---
 
 # Exa Web Search & Content Extraction
 
 Real-time web search and content extraction powered by Exa AI.
 
-**Prerequisite:** Set `EXA_API_KEY` environment variable.
-
-## API Quick Reference
-
-| Endpoint | Purpose |
-| -------- | ------- |
-| `POST /search` | Web search with optional content retrieval |
-| `POST /contents` | Extract content from specific URLs |
-| `POST /context` | Find code examples and programming context |
-
 ## Usage
+
+Use the Python script at `scripts/exa.py`. Requires `EXA_API_KEY` environment variable.
 
 ### Web Search
 
 ```bash
 # Basic search
-curl -X POST 'https://api.exa.ai/search' \
-  -H "x-api-key: $EXA_API_KEY" \
-  -H 'Content-Type: application/json' \
-  -d '{"query": "latest AI research", "text": true}'
+python scripts/exa.py search --query "latest AI research"
 
-# Deep search with more results
-curl -X POST 'https://api.exa.ai/search' \
-  -H "x-api-key: $EXA_API_KEY" \
-  -H 'Content-Type: application/json' \
-  -d '{"query": "React server components", "type": "deep", "numResults": 10, "text": true}'
+# Fast search for simple queries
+python scripts/exa.py search --query "node.js version" --type fast
 
-# Fast search
-curl -X POST 'https://api.exa.ai/search' \
-  -H "x-api-key: $EXA_API_KEY" \
-  -H 'Content-Type: application/json' \
-  -d '{"query": "node.js version", "type": "fast"}'
+# Deep search for comprehensive results
+python scripts/exa.py search --query "React server components" --type deep --num-results 10
+
+# With full text content
+python scripts/exa.py search --query "GraphQL best practices" --text
+
+# Filter by domain
+python scripts/exa.py search --query "LLM research" --include-domains "arxiv.org,paperswithcode.com"
+
+# Filter by date
+python scripts/exa.py search --query "AI news" --start-date "2025-01-01T00:00:00.000Z"
 ```
 
 ### Extract URL Content
 
 ```bash
-curl -X POST 'https://api.exa.ai/contents' \
-  -H "x-api-key: $EXA_API_KEY" \
-  -H 'Content-Type: application/json' \
-  -d '{"urls": ["https://docs.example.com/api"], "text": true}'
+# Extract from documentation
+python scripts/exa.py contents --urls "https://docs.python.org/3/tutorial/classes.html"
+
+# Multiple URLs
+python scripts/exa.py contents --urls "https://example.com/page1,https://example.com/page2"
+
+# Prefer live content
+python scripts/exa.py contents --urls "https://example.com/page" --livecrawl preferred
 ```
 
-### Code Context
+### Code Examples
 
 ```bash
-curl -X POST 'https://api.exa.ai/context' \
-  -H "x-api-key: $EXA_API_KEY" \
-  -H 'Content-Type: application/json' \
-  -d '{"query": "React useState hook examples", "tokensNum": 5000}'
+# Find code examples
+python scripts/exa.py code --query "React useState hook examples"
+
+# Quick syntax lookup
+python scripts/exa.py code --query "Python list comprehension" --tokens 2000
+
+# Detailed patterns
+python scripts/exa.py code --query "GraphQL resolver patterns" --tokens 15000
 ```
-
-## Workflow
-
-Think step-by-step when using Exa:
-
-1. **Choose the right endpoint** based on the task:
-   - Web research, searching topics → `/search`
-   - Extracting content from specific URLs → `/contents`
-   - Programming examples, code context → `/context`
-
-2. **Select search type** for `/search`:
-   - `fast` - Quick results, lower latency
-   - `auto` - Balanced (default)
-   - `deep` - Comprehensive, higher quality
-
-3. **Request content when needed** using `"text": true` or `"context": true`
-
-## When to Use Each Endpoint
-
-| Use `/search` | Use `/contents` | Use `/context` |
-| ------------- | --------------- | -------------- |
-| Finding relevant pages | You have a specific URL | Programming questions |
-| General web research | Extracting known content | API/library usage |
-| News and articles | Reading documentation | Code examples |
-| Exploring options | Getting full article text | Implementation patterns |
 
 ## Search Types
 
 | Type | Use Case | Speed |
 | ---- | -------- | ----- |
 | `fast` | Quick lookups, simple queries | Fastest |
-| `auto` | General purpose, balanced results | Medium |
-| `deep` | Complex research, comprehensive coverage | Slowest |
+| `auto` | General purpose (default) | Medium |
+| `deep` | Complex research, comprehensive | Slowest |
+
+## When to Use Each Command
+
+| Use `search` | Use `contents` | Use `code` |
+| ------------ | -------------- | ---------- |
+| Finding relevant pages | Have a specific URL | Programming questions |
+| General web research | Extracting known content | API/library usage |
+| News and articles | Reading documentation | Code examples |
+
+## Query Tips
+
+- Be specific: "React useEffect cleanup function examples" not "useEffect"
+- Include the library/framework name
+- Specify the programming language
+- Mention the use case (authentication, caching, etc.)
 
 ## Rules
 
-- **Current year is 2026** - Use this for date-relative queries (e.g., "latest", "recent", "this year")
-- Use `"type": "fast"` for simple factual queries
-- Use `"type": "deep"` for research requiring comprehensive results
-- Add `"text": true` to get full page content in search results
-- Add `"context": true` for LLM-optimized context strings
-- Use `/context` endpoint for programming questions instead of `/search`
-- Prefer `/contents` when you have a specific URL to extract
-
-## References
-
-- [Search](references/search.md) - Web search parameters and options
-- [Crawl](references/crawl.md) - URL content extraction
-- [Code](references/code.md) - Programming context search
+- Use `--type fast` for simple factual queries
+- Use `--type deep` for research requiring comprehensive results
+- Use `--text` to get full page content in search results
+- Use `code` command for programming questions instead of `search`
+- Use `contents` when you have a specific URL to extract
+- Use `--format json` for structured output when needed

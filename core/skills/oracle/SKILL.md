@@ -1,6 +1,6 @@
 ---
 name: oracle
-description: Invoke a powerful reasoning model for complex analysis tasks. Use this skill when the user asks to 'ask the oracle', 'get a second opinion', 'consult oracle', 'deep analysis', or when facing difficult bugs, reviewing critical code, designing complex refactors, or needing architectural analysis.
+description: Invoke a powerful reasoning model for complex analysis tasks. Use when facing difficult bugs, reviewing critical code, designing complex refactors, needing architectural analysis, or seeking consensus on decisions. Also use for 'ask the oracle', 'get a second opinion', 'consult oracle', or 'deep analysis'.
 ---
 
 # Oracle - Second Opinion Model

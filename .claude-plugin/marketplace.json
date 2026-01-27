@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "ccc-core",
-      "version": "1.3.3",
+      "version": "1.3.4",
       "description": "Opinionated Claude Code plugin",
       "source": "./core",
       "license": "MIT"
